@@ -59,6 +59,10 @@ function success(pos) {
   console.log(`More or less ${crd.accuracy} meters.`);
     
     document.getElementById("info").innerHTML =`Latitude : ${crd.latitude} Longitude: ${crd.longitude}` ;
+    
+    alert(`Latitude : ${crd.latitude}`
+        
+    );
 }
 
 function error(err) {
