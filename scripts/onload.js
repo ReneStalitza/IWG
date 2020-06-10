@@ -4,10 +4,10 @@
  */
 var places;
 // Set max/min coordinates to interact in a smaller area TODO: change to var values
-var maxLat = 51.965894;
-var minLat = 51.962976;
-var maxLon = 7.635459;
-var minLon = 7.633912;
+var maxLat = 51.982300;
+var minLat = 51.934486;
+var maxLon = 7.673033;
+var minLon = 7.579913;
 
 window.onload = () => {
     fetch('https://raw.githubusercontent.com/snavas/InteractionWithGeoinformation/master/assets/osmtrees.geojson')
