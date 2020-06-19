@@ -41,7 +41,7 @@ window.onload = () => {
             } else {};
         });
         distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distance');
-    }, 5000);
+    }, 3000);
 };
 
 var options = {
@@ -59,10 +59,7 @@ function success(pos) {
   console.log(`More or less ${crd.accuracy} meters.`);
     
     document.getElementById("info").innerHTML =`Latitude : ${crd.latitude} Longitude: ${crd.longitude}` ;
-    
-    alert(`Latitude : ${crd.latitude}`
-        
-    );
+  
 }
 
 function error(err) {
