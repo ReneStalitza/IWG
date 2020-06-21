@@ -44,7 +44,7 @@ window.onload = () => {
         distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distance');
     }, 6000);
 };
-
+/*
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -69,4 +69,4 @@ function error(err) {
 
 navigator.geolocation.getCurrentPosition(success, error, options);
 
-
+*/
