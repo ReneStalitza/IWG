@@ -26,6 +26,7 @@ window.onload = () => {
                 const icon = document.createElement('a-text');
                 icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                 icon.setAttribute('look-at', '[gps-camera]');
+                icon.setAttribute('clickable','');
                 icon.setAttribute('scale', '10 10 10');
                 icon.setAttribute('value', 'X');
                 icon.setAttribute('geometry', 'primitive: ring; radiusInner: 0.11; radiusOuter: 0.14');

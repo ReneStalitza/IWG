@@ -17,18 +17,20 @@
 #infobox {
     overflow-y: hidden;
   height: 3em; /* approximate max height */
-  bottom: 0%;
+  bottom: 01%;
   width:90%;
-    
+  border: 1px solid black;
+  outline-style: solid;
+  outline-width: thin;
   z-index: 11;
-  background-color: #3a3a3a;
+  background-color: #2F4F4F;
   color: white;
   position: fixed;
   display: flex;
 }
 
 #infobox.opened {
-  height: 45%;
+  height: 35%;
 }
 .mdiv {
   width: 30px;
@@ -42,7 +44,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 18px;
-  margin: 4px 4px;
+  margin: 4px 7px;
   cursor: pointer;
 }
 
@@ -67,8 +69,15 @@
     transform: rotate(0deg);
 }
 
-
-
-#info {
-    position: fixed; top: 20px; width:100%; text-align: center; z-index: 1;
+#boxHead {
+    font-family: sans-serif;
+    font-size: 2em;
+    margin: 8px;
+}
+#treeSpecies {
+    font-family: sans-serif;
+    font-size: 1em;
+    margin: 8px;
+    text-align: left;
+    
 }
