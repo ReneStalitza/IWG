@@ -23,16 +23,22 @@
     <a-camera gps-camera="simulateLatitude: 51.963538; simulateLongitude: 7.63436;maxDistance: 200" rotation-reader> </a-camera>
   </a-scene>
     
-    <div class="centered">
+    
+    <div class="center">
     <div id="infobox">
-        <button class="mdiv" id="close" onclick="closeInfobox()">
+     <div id="container">
+        <div id="boxHead">Info Tab </div>
+        <button class="mdiv" id="close" onclick="openInfobox()">
                 <div class="mdiv-inner">
                     <div class="md"></div>
                 </div>
             </button>
+         <div id="treeSpecies">Treetype: </div>
+        
         </div>
-      </div>
-    <div id="info"></div>
+     </div>    
+    </div>
+   
 </body>
 
 </html>
