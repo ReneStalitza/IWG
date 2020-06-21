@@ -14,12 +14,12 @@
 }
 
 
-.infobox {
+#infobox {
     overflow-y: hidden;
-  height: 45%; /* approximate max height */
+  height: 3em; /* approximate max height */
   bottom: 0%;
-  width:90%;
-  margin-right: 5%;
+  width:100%;
+    
   z-index: 11;
   background-color: #3a3a3a;
   color: white;
@@ -27,6 +27,48 @@
   display: flex;
 }
 
-.info {
+#infobox.opened {
+  height: 45%;
+}
+.mdiv {
+  width: 30px;
+  height: 30px;
+  right: 0;
+  top: 0;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 4px;
+  cursor: pointer;
+}
+
+.mdiv-inner {
+  height: 25px;
+  width: 2px;
+  margin-left: 9px;
+  background-color: white;
+  transform: rotate(90deg);
+  Z-index: 1;
+}
+
+.md {
+  height: 25px;
+  width: 2px;
+  background-color: white;
+  transform: rotate(90deg);
+  Z-index: 2;
+}
+
+.md.open {
+    transform: rotate(0deg);
+}
+
+
+
+#info {
     position: fixed; top: 20px; width:100%; text-align: center; z-index: 1;
 }

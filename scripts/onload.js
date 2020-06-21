@@ -67,3 +67,16 @@ function error(err) {
 }
 
 navigator.geolocation.getCurrentPosition(success, error, options);
+
+
+
+
+
+
+
+
+
+function closeInfobox() {
+    let infobox = document.querySelector('[id^="infobox"]');
+    infobox.classList.toggle("closed");
+}
