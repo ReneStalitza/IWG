@@ -5,8 +5,8 @@
 var places;
 // Set max/min coordinates to interact in a smaller area TODO: change to var values
 var maxLat = 51.968956;
-var minLat = 51.922976;
-var maxLon = 7.691953;
+var minLat = 51.952976;
+var maxLon = 7.631953;
 var minLon = 7.611886;
 
 window.onload = () => {
@@ -70,14 +70,3 @@ function error(err) {
 navigator.geolocation.getCurrentPosition(success, error, options);
 
 
-
-
-
-
-
-
-
-function closeInfobox() {
-    let infobox = document.querySelector('[id^="infobox"]');
-    infobox.classList.toggle("closed");
-}
