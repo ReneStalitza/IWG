@@ -44,6 +44,13 @@ window.onload = () => {
         distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distance');
     }, 6000);
 };
+
+
+function openInfobox() {
+    let infobox = document.querySelector("#infobox");
+    infobox.classList.toggle("opened");
+    let icon = document.querySelector(".md");
+    icon.classList.toggle("open");
 /*
 var options = {
   enableHighAccuracy: true,
