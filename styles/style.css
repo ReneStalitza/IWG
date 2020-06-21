@@ -18,7 +18,7 @@
     overflow-y: hidden;
   height: 3em; /* approximate max height */
   bottom: 0%;
-  width:100%;
+  width:90%;
     
   z-index: 11;
   background-color: #3a3a3a;
