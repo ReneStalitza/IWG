@@ -5,8 +5,8 @@
 var places;
 // Set max/min coordinates to interact in a smaller area TODO: change to var values
 var maxLat = 51.968956;
-var minLat = 51.962976;
-var maxLon = 7.641953;
+var minLat = 51.922976;
+var maxLon = 7.691953;
 var minLon = 7.611886;
 
 window.onload = () => {
@@ -58,7 +58,7 @@ function success(pos) {
   console.log(`Longitude: ${crd.longitude}`);
   console.log(`More or less ${crd.accuracy} meters.`);
     
-    document.getElementById("info").innerHTML =`Latitude : ${crd.latitude} Longitude: ${crd.longitude}` ;
+    document.getElementById("info").innerHTML =`Latitude : ${crd.latitude} Longitude: ${crd.longitude} max: ${crd.longitude + 0.5} ` ;
   
 }
 
