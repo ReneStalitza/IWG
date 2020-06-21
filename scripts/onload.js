@@ -51,6 +51,7 @@ function openInfobox() {
     infobox.classList.toggle("opened");
     let icon = document.querySelector(".md");
     icon.classList.toggle("open");
+}
 /*
 var options = {
   enableHighAccuracy: true,
