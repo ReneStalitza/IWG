@@ -42,7 +42,7 @@ window.onload = () => {
             } else {};
         });
         distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distance');
-    }, 3000);
+    }, 6000);
 };
 
 var options = {
