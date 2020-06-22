@@ -72,7 +72,7 @@ function openInfobox() {
                 // set color on click dependent on index component
                 el.addEventListener('click', e =>{  
             document.getElementById('treeSpecies').innerHTML= el.getAttribute('species');
-             console.log(el.getAttribute('species'));
+             
                 
                 });
              }
