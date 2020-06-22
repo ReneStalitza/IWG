@@ -1,5 +1,5 @@
 
-
+/*
 function openInfobox() {
     let infobox = document.querySelector("#infobox");
     infobox.classList.toggle("opened");
@@ -7,7 +7,7 @@ function openInfobox() {
     icon.classList.toggle("open");
     
 }
-
+*/
       AFRAME.registerComponent('clickable', {
             init: function(){
                 let el = this.el;
@@ -25,7 +25,7 @@ function openInfobox() {
                 });
                 // set color on click dependent on index component
                 el.addEventListener('click', e =>{  
-                    console.log(self.trees[0].el.components.species);
+                    alert(self.trees[0].el.components.species);
                
                 });
              }
