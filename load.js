@@ -18,7 +18,8 @@ function openInfobox() {
                     if (!tree3D){return;}    
                     tree3D.traverse(function(node){
                         if (node.isMesh){   
-                          self.trees.push(node);                          
+                          self.trees.push(node);
+                            console.log(el);
                          
                         }
                     });
@@ -26,6 +27,7 @@ function openInfobox() {
                 // set color on click dependent on index component
                 el.addEventListener('click', e =>{  
                     alert(self.trees[0].el.components.species);
+                    console.log(self.trees[0].el.components.species);
                
                 });
              }

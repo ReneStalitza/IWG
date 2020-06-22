@@ -6,7 +6,7 @@ var places;
 // Set max/min coordinates to interact in a smaller area TODO: change to var values
 var maxLat = 51.968956;
 var minLat = 51.962976;
-var maxLon = 7.628953;
+var maxLon = 7.636953;
 var minLon = 7.620886;
 
 window.onload = () => {
@@ -28,7 +28,6 @@ window.onload = () => {
                 icon.setAttribute('look-at', '[gps-camera]');
                 icon.setAttribute('clickable','');
                 icon.setAttribute('scale', '10 10 10');
-                icon.setAttribute('value', 'X');
                 icon.setAttribute('geometry', 'primitive: ring; radiusInner: 0.11; radiusOuter: 0.14');
                 icon.setAttribute('align', 'center');
                 if (species == "" || species == undefined) {
@@ -42,7 +41,7 @@ window.onload = () => {
             } else {};
         });
         distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distance');
-    }, 6000);
+    }, 4000);
 };
 
 
@@ -52,6 +51,35 @@ function openInfobox() {
     let icon = document.querySelector(".md");
     icon.classList.toggle("open");
 }
+
+ AFRAME.registerComponent('clickable', {
+            init: function(){
+                let el = this.el;
+                let self = this;
+                self.trees = [];  
+            //    console.log(el);
+          /*      el.addEventListener("model-loaded", e =>{
+                    let tree3D = el.getObject3D('mesh');
+                    if (!tree3D){return;}    
+                    tree3D.traverse(function(node){
+                        if (node.isMesh){   
+                          self.trees.push(node);
+                            console.log(el);
+                         
+                        }
+                    });
+                }); */
+                // set color on click dependent on index component
+                el.addEventListener('click', e =>{  
+             alert(el.getAttribute('species'));
+                
+             console.log(el.getAttribute('species'));
+                
+                });
+             }
+      });
+
+
 /*
 var options = {
   enableHighAccuracy: true,
