@@ -9,6 +9,8 @@ var minLat = 51.962976;
 var maxLon = 7.636953;
 var minLon = 7.620886;
 
+var active;
+
 window.onload = () => {
     fetch('https://raw.githubusercontent.com/snavas/InteractionWithGeoinformation/master/assets/osmtrees.geojson')
         .then(response => response.json())
@@ -41,7 +43,7 @@ window.onload = () => {
             } else {};
         });
         distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distance');
-    }, 4000);
+    }, 3000);
 };
 
 
@@ -55,23 +57,20 @@ function openInfobox() {
  AFRAME.registerComponent('clickable', {
             init: function(){
                 let el = this.el;
-                let self = this;
-                self.trees = [];  
-            //    console.log(el);
-          /*      el.addEventListener("model-loaded", e =>{
-                    let tree3D = el.getObject3D('mesh');
-                    if (!tree3D){return;}    
-                    tree3D.traverse(function(node){
-                        if (node.isMesh){   
-                          self.trees.push(node);
-                            console.log(el);
-                         
-                        }
-                    });
-                }); */
+                
                 // set color on click dependent on index component
-                el.addEventListener('click', e =>{  
-            document.getElementById('treeSpecies').innerHTML= el.getAttribute('species');
+                el.addEventListener('click', e =>{ 
+                
+                 el.setAttribute('geometry', 'radiusOuter: 0.2');
+                 if(active == "" || active == undefined){
+                 }
+                 else{
+                     active.setAttribute('geometry', 'radiusOuter: 0.14' );
+                 };
+                    
+                    active = el; 
+                   
+                   document.getElementById('treeSpecies').innerHTML= el.getAttribute('species');
              
                 
                 });
