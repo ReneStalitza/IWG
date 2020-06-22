@@ -27,6 +27,7 @@
   color: white;
   position: fixed;
   display: flex;
+  font-family: sans-serif;
 }
 
 #infobox.opened {
@@ -69,15 +70,24 @@
     transform: rotate(0deg);
 }
 
+#conatiner{
+    
+}
+
 #boxHead {
-    font-family: sans-serif;
     font-size: 2em;
     margin: 8px;
+    margin-right: 50px;
 }
-#treeSpecies {
-    font-family: sans-serif;
-    font-size: 1em;
+
+#treeType{
     margin: 8px;
+    text-align: left;
+}
+
+#treeSpecies {
+    font-size: 1em;
+    margin: ;
     text-align: left;
     
 }
