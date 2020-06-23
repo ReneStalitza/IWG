@@ -90,22 +90,22 @@
 #container-left{
     width: 20%;
     top: 44px;
-    right: 79.7%;
+    right: 79%;
     position: absolute;
 }
 
 
 #container-middle{
-    width: 60%;
+    width: 58%;
     top: 44px;
-    right: 17.5%;
+    right: 18.6%;
     position: absolute;
 }
 
 #container-right{
     width: 15%;
     top: 44px;
-    left: 85%;
+    left: 84%;
     position: absolute;
 }
 
