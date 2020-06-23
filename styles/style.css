@@ -75,7 +75,7 @@
 #container-up{
     width: 100%;
     height: 50px;
-    outline: 1px solid white;
+    outline: 2px solid white;
     background-color: #618685;
     text-align: left;
     
@@ -89,28 +89,29 @@
 
 #container-left{
     width: 20%;
-    top: 42px;
+    top: 44px;
     right: 79.7%;
     position: absolute;
 }
 
 
 #container-middle{
-    width: 58%;
-    top: 42px;
-    right: 21%;
+    width: 60%;
+    top: 44px;
+    right: 17.5%;
     position: absolute;
 }
 
 #container-right{
-    width: 20%;
-    top: 42px;
-    left: 79.7%;
+    width: 15%;
+    top: 44px;
+    left: 85%;
     position: absolute;
 }
 
 #current, #affected, #treeType, #treeSpecies, #potential, #pot{
-    outline-offset: 2px;
+    outline-offset: 5px;
     outline: 1px solid white;
     font-size: 0.7em;
+    
 }
