@@ -10,7 +10,7 @@ var maxLon = 7.636953;
 var minLon = 7.620886;
 
 var active;
-
+/*
 window.onload = () => {
     fetch('https://raw.githubusercontent.com/snavas/InteractionWithGeoinformation/master/assets/osmtrees.geojson')
         .then(response => response.json())
@@ -45,12 +45,12 @@ window.onload = () => {
         distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distance');
     }, 3000);
 };
-
+*/
 
 function openInfobox() {
     let infobox = document.querySelector("#infobox");
     infobox.classList.toggle("opened");
-    let icon = document.querySelector(".md");
+    let icon = document.querySelector(".button-in");
     icon.classList.toggle("open");
 }
 

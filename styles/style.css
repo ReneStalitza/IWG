@@ -17,7 +17,7 @@
 #infobox {
     overflow-y: hidden;
   height: 3em; /* approximate max height */
-  bottom: 01%;
+  bottom: 1%;
   width:90%;
   border: 1px solid black;
   outline-style: solid;
@@ -33,7 +33,7 @@
 #infobox.opened {
   height: 35%;
 }
-.mdiv {
+.button {
   width: 30px;
   height: 30px;
   right: 0;
@@ -49,7 +49,7 @@
   cursor: pointer;
 }
 
-.mdiv-inner {
+.button-inner {
   height: 25px;
   width: 2px;
   margin-left: 9px;
@@ -58,7 +58,7 @@
   Z-index: 1;
 }
 
-.md {
+.button-in {
   height: 25px;
   width: 2px;
   background-color: white;
@@ -66,28 +66,55 @@
   Z-index: 2;
 }
 
-.md.open {
+.button-in.open {
     transform: rotate(0deg);
 }
 
-#conatiner{
+#container-up{
+    width: 100%;
+    height: 50px;
+    outline: 1px solid white;
+    background-color: #618685;
     
+}
+
+#container-left{
+    width: 20%;
+    height: ;
+    top: 43px;
+    right: 79%;
+    position: absolute;
+    margin-left: %;
 }
 
 #boxHead {
     font-size: 2em;
     margin: 8px;
-    margin-right: 50px;
+    margin-right: 0px;
 }
 
 #treeType{
-    margin: 8px;
-    text-align: left;
+    
+    outline-offset: 8px;
+    outline: 1px solid white;
 }
 
-#treeSpecies {
-    font-size: 1em;
-    margin: ;
-    text-align: left;
+#treeSpecies{
     
+    outline-offset: 8px;
+    outline: 1px solid white;
+}
+
+#container-middle{
+    width: 30%;
+    height: ;
+    top: 43px;
+    right: 47%;
+    position: absolute;
+    margin-left: %;
+}
+
+#current, #affected, #treeType, #treeSpecies{
+    outline-offset: 8px;
+    outline: 1px solid white;
 }
