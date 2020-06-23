@@ -115,3 +115,27 @@
     font-size: 0.7em;
     
 }
+
+#container-bottom {
+    width: 95%;
+    top: 110px;
+    height: 55%;
+    margin: 1%;
+    margin-left: 2%;
+    position: absolute;
+}
+
+#description {
+    outline-offset: 5px;
+    outline: 1px solid white;
+    font-size: 0.7em;
+    background-color: #415050;
+}
+
+#des {
+    
+    outline-offset: 5px;
+    outline: 1px solid white;
+    font-size: 0.7em;
+    height: 50%;
+}
