@@ -18,7 +18,7 @@
     overflow-y: hidden;
   height: 3em; /* approximate max height */
   bottom: 1%;
-  width:90%;
+  width:98%;
   border: 1px solid black;
   outline-style: solid;
   outline-width: thin;
@@ -78,43 +78,39 @@
     
 }
 
-#container-left{
-    width: 20%;
-    height: ;
-    top: 43px;
-    right: 79%;
-    position: absolute;
-    margin-left: %;
-}
-
 #boxHead {
     font-size: 2em;
     margin: 8px;
     margin-right: 0px;
 }
 
-#treeType{
-    
-    outline-offset: 8px;
-    outline: 1px solid white;
-}
-
-#treeSpecies{
-    
-    outline-offset: 8px;
-    outline: 1px solid white;
-}
-
-#container-middle{
-    width: 30%;
+#container-left{
+    width: 20%;
     height: ;
     top: 43px;
-    right: 47%;
+    right: 79%;
     position: absolute;
-    margin-left: %;
 }
 
-#current, #affected, #treeType, #treeSpecies{
-    outline-offset: 8px;
+
+#container-middle{
+    width: 50%;
+    height: ;
+    top: 43px;
+    right: 25%;
+    position: absolute;
+}
+
+#container-right{
+    width: 20%;
+    height: ;
+    top: 43px;
+    left: 79%;
+    position: absolute;
+}
+
+#current, #affected, #treeType, #treeSpecies, #potential, #pot{
+    outline-offset: 5px;
     outline: 1px solid white;
+    font-size: 0.8em;
 }
