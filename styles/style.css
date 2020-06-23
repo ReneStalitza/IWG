@@ -90,28 +90,28 @@
 
 #container-left{
     width: 20%;
-    top: 43px;
-    right: 79%;
+    top: 42px;
+    right: 79.7%;
     position: absolute;
 }
 
 
 #container-middle{
-    width: 50%;
-    top: 43px;
-    right: 25%;
+    width: 58%;
+    top: 42px;
+    right: 21%;
     position: absolute;
 }
 
 #container-right{
     width: 20%;
-    top: 43px;
-    left: 79%;
+    top: 42px;
+    left: 79.7%;
     position: absolute;
 }
 
 #current, #affected, #treeType, #treeSpecies, #potential, #pot{
-    outline-offset: 5px;
+    outline-offset: 2px;
     outline: 1px solid white;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
