@@ -117,8 +117,10 @@
 }
 
 #container-bottom {
+    
+    
     width: 95%;
-    top: 110px;
+    top: 100px;
     height: 55%;
     margin: 1%;
     margin-left: 2%;
@@ -131,13 +133,41 @@
     font-size: 0.7em;
 }
 
+#add {
+    
+}
+
 #des {
     
     outline-offset: 5px;
     outline: 2px solid white;
     font-size: 0.7em;
-    height: 50%;
-    width: 98.5%;
+    color: white;
+    height: 10%;
+    width: 87%;
+    left:0%;
     text-align: left;
     background-color: #466767;
+    position: absolute;
+}
+
+#button {
+    
+    width: 8%;
+    right: 0%;
+    position: absolute;
+    background-color: gainsboro;
+}
+
+#info {
+    outline-offset: 5px;
+    outline: 2px solid white;
+    font-size: 0.7em;
+    color: white;
+    height: 40%;
+    width: 88.4%;
+    top: 46%;
+    text-align: left;
+    overflow: auto;
+    position: absolute;
 }

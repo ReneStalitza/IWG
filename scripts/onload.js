@@ -10,7 +10,7 @@ var maxLon = 7.636953;
 var minLon = 7.620886;
 
 var active;
-/*
+
 window.onload = () => {
     fetch('https://raw.githubusercontent.com/snavas/InteractionWithGeoinformation/master/assets/osmtrees.geojson')
         .then(response => response.json())
@@ -24,11 +24,13 @@ window.onload = () => {
             const species = place.species;
             // just add trees of selected area
             if (latitude < maxLat && latitude > minLat && longitude < maxLon && longitude > minLon) {
-
+                var array = [];
+                
                 const icon = document.createElement('a-text');
                 icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                 icon.setAttribute('look-at', '[gps-camera]');
                 icon.setAttribute('clickable','');
+                icon.setAttribute('description', '');
                 icon.setAttribute('scale', '10 10 10');
                 icon.setAttribute('geometry', 'primitive: ring; radiusInner: 0.11; radiusOuter: 0.14');
                 icon.setAttribute('align', 'center');
@@ -45,13 +47,13 @@ window.onload = () => {
         distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distance');
     }, 3000);
 };
-*/
+
 
 function openInfobox() {
     let infobox = document.querySelector("#infobox");
     infobox.classList.toggle("opened");
-    let icon = document.querySelector(".button-in");
-    icon.classList.toggle("open");
+    let button = document.querySelector(".button-in");
+    button.classList.toggle("open");
 }
 
  AFRAME.registerComponent('clickable', {
@@ -71,11 +73,39 @@ function openInfobox() {
                     active = el; 
                    
                    document.getElementById('treeSpecies').innerHTML= el.getAttribute('species');
-             
-                
+                   
+                  document.getElementById("myList").innerHTML='';
+                  let len = el.components.description.data.length;
+                   if(len > 0){ 
+                       for(var i =0; i < len; i++ ){
+                           document.getElementById("myList").appendChild(el.components.description.data[i]);
+                    }
+                   }
+                    else {
+                        document.getElementById("myList").innerHTML='';
+                    }
+            
                 });
              }
       });
+
+AFRAME.registerComponent('description', {
+    schema: {type: 'array', default:[]}
+      });
+
+
+function addInfo() {
+  var node = document.createElement("LI");
+  var text = document.getElementById('des').value;
+  console.log(active);
+  var textnode = document.createTextNode(text);
+  node.appendChild(textnode);
+  document.getElementById("myList").appendChild(node);
+  
+  active.components.description.data.push(node);
+    
+  document.getElementById('des').value = "";
+}
 
 
 /*
