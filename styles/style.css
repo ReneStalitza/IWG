@@ -16,8 +16,8 @@
 
 #infobox {
     overflow-y: hidden;
-  height: 3em; /* approximate max height */
-  bottom: 1%;
+  height: 3em; 
+  bottom: 0.5%;
   width:98%;
   border: 1px solid black;
   outline-style: solid;
@@ -32,7 +32,7 @@
 }
 
 #infobox.opened {
-  height: 35%;
+  height: 40%;
 }
 .button {
   width: 30px;
@@ -118,8 +118,7 @@
 
 #container-bottom {
     
-    
-    width: 95%;
+    width: 96%;
     top: 100px;
     height: 55%;
     margin: 1%;
@@ -133,9 +132,6 @@
     font-size: 0.7em;
 }
 
-#add {
-    
-}
 
 #des {
     
@@ -144,7 +140,7 @@
     font-size: 0.7em;
     color: white;
     height: 10%;
-    width: 87%;
+    width: 85%;
     left:0%;
     text-align: left;
     background-color: #466767;
@@ -153,7 +149,7 @@
 
 #button {
     
-    width: 8%;
+    width: 10%;
     right: 0%;
     position: absolute;
     background-color: gainsboro;
@@ -165,8 +161,8 @@
     font-size: 0.7em;
     color: white;
     height: 40%;
-    width: 88.4%;
-    top: 46%;
+    width: 87.2%;
+    top: 52%;
     text-align: left;
     overflow: auto;
     position: absolute;
