@@ -116,6 +116,14 @@
     
 }
 
+#afButton{
+    right: 2%;
+    position: absolute;
+    background-color: gainsboro;
+    text-align: center;
+    font-size: 0.9em;
+}
+
 #container-bottom {
     
     width: 96%;
@@ -138,16 +146,16 @@
     outline-offset: 5px;
     outline: 2px solid white;
     font-size: 0.7em;
-    color: white;
+    color: black;
     height: 10%;
     width: 80%;
     left:0%;
     text-align: left;
-    background-color: #466767;
+    background-color: lightgray;
     position: absolute;
 }
 
-#button {
+#add {
     
     width: 12%;
     right: 0%;
@@ -162,8 +170,8 @@
     font-size: 0.7em;
     color: white;
     height: 38%;
-    width: 98%;
-    top: 53%;
+    width: 100%;
+    top: 54%;
     text-align: left;
     overflow: auto;
     position: absolute;

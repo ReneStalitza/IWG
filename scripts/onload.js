@@ -31,7 +31,7 @@ window.onload = () => {
                 icon.setAttribute('look-at', '[gps-camera]');
                 icon.setAttribute('clickable','');
                 icon.setAttribute('description', '');
-                icon.setAttribute('scale', '10 10 10');
+                icon.setAttribute('scale', '7 7 7');
                 icon.setAttribute('geometry', 'primitive: ring; radiusInner: 0.11; radiusOuter: 0.14');
                 icon.setAttribute('align', 'center');
                 if (species == "" || species == undefined) {
@@ -48,14 +48,6 @@ window.onload = () => {
     }, 3000);
 };
 
-
-function openInfobox() {
-    let infobox = document.querySelector("#infobox");
-    infobox.classList.toggle("opened");
-    let button = document.querySelector(".button-in");
-    button.classList.toggle("open");
-}
-
  AFRAME.registerComponent('clickable', {
             init: function(){
                 let el = this.el;
@@ -63,19 +55,23 @@ function openInfobox() {
                 // set color on click dependent on index component
                 el.addEventListener('click', e =>{ 
                 
-                 el.setAttribute('geometry', 'radiusOuter: 0.2');
-                 if(active == "" || active == undefined){
-                 }
-                 else{
+                el.setAttribute('geometry', 'radiusOuter: 0.2');
+                if(active == "" || active == undefined) {}
+                else{
                      active.setAttribute('geometry', 'radiusOuter: 0.14' );
-                 };
+                };
                     
-                    active = el; 
+                active = el; 
+                 document.getElementById('treeSpecies').innerHTML= el.getAttribute('species');
+                    
+                if(el.components.text.data.color == 'orange' || el.components.text.color == 'red' ){        document.getElementById('pot').innerHTML= 'Yes';
+                }
+                else {
+                 document.getElementById('pot').innerHTML= 'No';
+                 }
                    
-                   document.getElementById('treeSpecies').innerHTML= el.getAttribute('species');
-                   
-                  document.getElementById("myList").innerHTML='';
-                  let len = el.components.description.data.length;
+                document.getElementById("myList").innerHTML='';
+                let len = el.components.description.data.length;
                    if(len > 0){ 
                        for(var i =0; i < len; i++ ){
                            document.getElementById("myList").appendChild(el.components.description.data[i]);
@@ -94,10 +90,20 @@ AFRAME.registerComponent('description', {
       });
 
 
+function openInfobox() {
+    let infobox = document.querySelector("#infobox");
+    infobox.classList.toggle("opened");
+    let button = document.querySelector(".button-in");
+    button.classList.toggle("open");
+}
+
 function addInfo() {
+  if (active == "" || active == undefined){
+      alert("Please select a tree");
+  }
+  else { 
   var node = document.createElement("LI");
   var text = document.getElementById('des').value;
-  console.log(active);
   var textnode = document.createTextNode(text);
   node.appendChild(textnode);
   document.getElementById("myList").appendChild(node);
@@ -105,8 +111,13 @@ function addInfo() {
   active.components.description.data.push(node);
     
   document.getElementById('des').value = "";
+  }
 }
-
+/*
+function change(){
+    
+}
+*/
 
 /*
 var options = {
