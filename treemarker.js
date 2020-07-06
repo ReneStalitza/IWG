@@ -10,5 +10,4 @@ function markTree(item) {
         });
         item.setAttribute('affected', '');
     }
-    item.removeAttribute('activetree');
 }
