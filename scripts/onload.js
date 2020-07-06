@@ -25,11 +25,11 @@ window.onload = () => {
             // just add trees of selected area
             if (latitude < maxLat && latitude > minLat && longitude < maxLon && longitude > minLon) {
                 var array = [];
-                
+
                 const icon = document.createElement('a-text');
                 icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                 icon.setAttribute('look-at', '[gps-camera]');
-                icon.setAttribute('clickable','');
+                icon.setAttribute('clickable', '');
                 icon.setAttribute('description', '');
                 icon.setAttribute('scale', '7 7 7');
                 icon.setAttribute('geometry', 'primitive: ring; radiusInner: 0.11; radiusOuter: 0.14');
@@ -39,7 +39,7 @@ window.onload = () => {
                 } else {
                     icon.setAttribute('species', species);
                 }
-               // console.log(icon.getAttribute('species'));
+                // console.log(icon.getAttribute('species'));
                 checkIfEndangered(icon);
                 scene.appendChild(icon);
             } else {};

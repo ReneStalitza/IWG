@@ -36,18 +36,15 @@ function checkIfEndangered(element) {
     if (species == "Oak" || species == "Pine" || species == "Cedar" || species == "Fir") {
         element.setAttribute('color', 'orange');
         element.setAttribute('value', '!');
-        element.setAttribute('material', {color: 'orange'} );
-        
+        element.setAttribute('material', {
+            color: 'orange'
+        });
+
         return;
     }
-        element.setAttribute('color', 'white');
-        element.setAttribute('value', 'i');
-        element.setAttribute('material', {color: 'white'} );
+    element.setAttribute('color', 'white');
+    element.setAttribute('value', 'i');
+    element.setAttribute('material', {
+        color: 'white'
+    });
 }
-
-
-
-
-           //icon.setAttribute('value', 'X');
-           //icon.setAttribute('color', 'red');
-           //icon.setAttribute('material', {color: 'red'} );
