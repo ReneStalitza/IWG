@@ -37,3 +37,13 @@ Possible interactions for the user
   |  Click "Add"-Button | Add described information to selected tree |
   |  Click "Change"-Button | Change affection of selected tree |
   
+  ### Tree visualization
+  Shown icons representing trees
+  |**Icon**|**Description**|
+  |------|-----|
+  |  <a><img src="https://github.com/ReneStalitza/test/blob/master/readmePNG/i.png" width="40" height="40"></a> | No affection possible|
+  |  <a><img src="https://github.com/ReneStalitza/test/blob/master/readmePNG/!.png" width="40" height="40"></a> | Currently not affected, affection possible |
+  |  <a><img src="https://github.com/ReneStalitza/test/blob/master/readmePNG/X.png" width="40" height="40"></a> | Tree is affected |
+    
+  
+  
