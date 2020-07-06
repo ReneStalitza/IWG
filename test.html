@@ -12,6 +12,7 @@
     
     <script src="scripts/randomTreeType.js"></script>
     <script src="scripts/onload.js"></script>
+    <script src="scripts/treemarker.js"></script>
     
 <body style="margin: 0; overflow: hidden;">
   <a-scene
@@ -41,7 +42,9 @@
         </div>
         <div id="container-middle" >
          <p id="current">Affected of oak processionary moths</p>
-         <p id="affected">- <button id ="afButton" onclick="change()">Change</button></p>
+            <div id="container-affected">
+             <p id="isAffected">-</p> <button id ="afButton" onclick="markTree()">Change</button>
+            </div>
         </div>
         <div id="container-right" >
          <p id="potential">Potential</p>
@@ -49,8 +52,10 @@
         </div>
         <div id="container-bottom" >
          <p id="description">Descriptiion</p>
+            <div id="container-add">
             <input id="des" type="text" placeholder="Add description...">
             <button id="add" onclick="addInfo()">Add </button>
+                </div>
         <div id="info">
             <ul id="myList"></ul>
             </div>    

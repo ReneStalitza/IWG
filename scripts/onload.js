@@ -64,11 +64,21 @@ window.onload = () => {
                 active = el; 
                  document.getElementById('treeSpecies').innerHTML= el.getAttribute('species');
                     
-                if(el.components.text.data.color == 'orange' || el.components.text.color == 'red' ){        document.getElementById('pot').innerHTML= 'Yes';
+                if(el.components.text.data.color == 'orange' || el.components.text.data.color == 'red' ){            document.getElementById('pot').innerHTML= 'Yes';
+                document.getElementById('afButton').style.display="block"                                                                   
                 }
                 else {
                  document.getElementById('pot').innerHTML= 'No';
+                 document.getElementById('afButton').style.display="none";
+                 
                  }
+                
+                if(el.components.text.data.color == 'red'){
+                    document.getElementById('isAffected').innerHTML= 'Yes';
+                }
+                else {
+                    document.getElementById('isAffected').innerHTML= 'No';
+                }
                    
                 document.getElementById("myList").innerHTML='';
                 let len = el.components.description.data.length;
