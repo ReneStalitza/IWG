@@ -3,60 +3,58 @@
 
 <head>
     <title>Tree Cadaster</title>
-    
-    <link rel="stylesheet"  href="styles/style.css">
+
+    <link rel="stylesheet" href="styles/style.css">
     <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
 </head>
-    
-    <script src="scripts/randomTreeType.js"></script>
-    <script src="scripts/onload.js"></script>
+
+<script src="scripts/pqueue.js"></script>
+<script src="scripts/distance.js"></script>
+<script src="scripts/randomTreeType.js"></script>
+<script src="scripts/treemarker.js"></script>
+<script src="scripts/loadtrees.js"></script>
+<script src="scripts/onload.js"></script>
 
 <body style="margin: 0; overflow: hidden;">
-  <a-scene
-    cursor="rayOrigin: mouse; fuse: true; fuseTimeout: 0;"
-    raycaster="objects: [clickable];"
-    vr-mode-ui="enabled: false"
-    embedded
-    arjs="sourceType: webcam; debugUIEnabled: false;"
-  >
-    <a-camera gps-camera="maxDistance: 200" rotation-reader> </a-camera>
-  </a-scene>
-    
+    <a-scene cursor="rayOrigin: mouse; fuse: true; fuseTimeout: 0;" raycaster="objects: [clickable];" vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+        <a-camera gps-camera="maxDistance: 200" rotation-reader latVal='51.963538' lonVal='7.63436'> </a-camera>
+    </a-scene>
+
     <div class="center">
-    <div id="infobox">
-     <div id="container-up">
-        <div id="boxHead">Info Tab </div>
-        <button class="button" id="open" onclick="openInfobox()">
-                <div class="button-inner">
-                    <div class="button-in"></div>
+        <div id="infobox">
+            <div id="container-up">
+                <div id="boxHead">Info Tab </div>
+                <button class="button" id="open" onclick="openInfobox()">
+                    <div class="button-inner">
+                        <div class="button-in"></div>
+                    </div>
+                </button>
+            </div>
+            <div id="container-left">
+                <p id="treeType">Treetype</p>
+                <p id="treeSpecies">-</p>
+            </div>
+            <div id="container-middle">
+                <p id="current">Affected of oak processionary moths</p>
+                <p id="affected">- <button id="afButton" onclick="change()">Change</button></p>
+            </div>
+            <div id="container-right">
+                <p id="potential">Potential</p>
+                <p id="pot">-</p>
+            </div>
+            <div id="container-bottom">
+                <p id="description">Descriptiion</p>
+                <input id="des" type="text" placeholder="Add description...">
+                <button id="add" onclick="addInfo()">Add </button>
+                <div id="info">
+                    <ul id="myList"></ul>
                 </div>
-            </button>
-         </div>
-        <div id="container-left" >
-         <p id="treeType">Treetype</p>
-         <p id="treeSpecies">-</p>
+
+            </div>
+
         </div>
-        <div id="container-middle" >
-         <p id="current">Affected of oak processionary moths</p>
-         <p id="affected">- <button id ="afButton" onclick="change()">Change</button></p>
-        </div>
-        <div id="container-right" >
-         <p id="potential">Potential</p>
-         <p id="pot">-</p>
-        </div>
-        <div id="container-bottom" >
-         <p id="description">Descriptiion</p>
-            <input id="des" type="text" placeholder="Add description...">
-            <button id="add" onclick="addInfo()">Add </button>
-        <div id="info">
-            <ul id="myList"></ul>
-            </div>    
-             
-        </div>
-        
-     </div>    
     </div>
 </body>
 
