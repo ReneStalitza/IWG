@@ -109,7 +109,7 @@
     position: absolute;
 }
 
-#current, #affected, #treeType, #treeSpecies, #potential, #pot{
+#current, #container-affected, #treeType, #treeSpecies, #potential, #pot{
     outline-offset: 5px;
     outline: 2px solid white;
     font-size: 0.7em;
@@ -117,11 +117,13 @@
 }
 
 #afButton{
-    right: 2%;
+    
+    right: 0%;
+    top: 55%;
     position: absolute;
     background-color: gainsboro;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 #container-bottom {
@@ -140,12 +142,17 @@
     font-size: 0.7em;
 }
 
+#container-add {
+    
+    outline-offset: 5px;
+    height: 15%;
+    outline: 2px solid white;
+    font-size: 0.7em;   
+}
 
 #des {
     
-    outline-offset: 5px;
-    outline: 2px solid white;
-    font-size: 0.7em;
+    
     color: black;
     height: 10%;
     width: 80%;
@@ -162,6 +169,7 @@
     position: absolute;
     background-color: gainsboro;
     text-align: center;
+    font-size: 1em;
 }
 
 #info {

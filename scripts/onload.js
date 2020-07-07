@@ -30,10 +30,19 @@ AFRAME.registerComponent('clickable', {
             active = el;
             document.getElementById('treeSpecies').innerHTML = el.getAttribute('species');
 
-            if (el.components.text.data.color == 'orange' || el.components.text.color == 'red') {
+            if (el.components.text.data.color == 'orange' || el.components.text.data.color == 'red') {
                 document.getElementById('pot').innerHTML = 'Yes';
+                document.getElementById('afButton').style.display = "block"
             } else {
                 document.getElementById('pot').innerHTML = 'No';
+                document.getElementById('afButton').style.display = "none";
+
+            }
+
+            if (el.components.text.data.color == 'red') {
+                document.getElementById('isAffected').innerHTML = 'Yes';
+            } else {
+                document.getElementById('isAffected').innerHTML = 'No';
             }
 
             document.getElementById("myList").innerHTML = '';
@@ -80,37 +89,3 @@ function addInfo() {
         document.getElementById('des').value = "";
     }
 }
-/*
-function change(){
-    
-}
-*/
-
-/**
-* Aktuelle Position
-
-var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0
-};
-
-function success(pos) {
-  var crd = pos.coords;
-
-  console.log('Your current position is:');
-  console.log(`Latitude : ${crd.latitude}`);
-  console.log(`Longitude: ${crd.longitude}`);
-  console.log(`More or less ${crd.accuracy} meters.`);
-    
-    document.getElementById("info").innerHTML =`Latitude : ${crd.latitude} Longitude: ${crd.longitude} max: ${crd.longitude + 0.5} ` ;
-  
-}
-
-function error(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
-}
-
-navigator.geolocation.getCurrentPosition(success, error, options);
-
-**/
