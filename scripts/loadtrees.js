@@ -17,8 +17,6 @@ function loadTrees() {
         var lat = document.querySelector('a-camera').getAttribute('latVal');
         var lon = document.querySelector('a-camera').getAttribute('lonVal');
 
-        console.log(lat);
-
         var pqueue = new PseudoPQueue(50);
 
         places.features.forEach((place) => {
