@@ -70,7 +70,7 @@ function openInfobox() {
 
 function addInfo() {
     if (active == "" || active == undefined) {
-        alert("Please select a tree");
+        //alert("Please select a tree");
     } else {
         var node = document.createElement("LI");
         var text = document.getElementById('des').value;

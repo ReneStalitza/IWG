@@ -18,7 +18,7 @@ function markTree(item) {
 
 function markTreeButton() {
     if (active == "" || active == undefined) {
-        alert("Please select a tree");
+      //  alert("Please select a tree");
     } else {
         item = active;
         markTree(item);
