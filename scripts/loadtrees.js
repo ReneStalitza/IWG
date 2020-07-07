@@ -69,5 +69,4 @@ function success(pos) {
     var crd = pos.coords;
     document.querySelector('a-camera').setAttribute('latVal', crd.latitude);
     document.querySelector('a-camera').setAttribute('lonVal', crd.longitude);
-    console.log(crd.latitude);
 }
