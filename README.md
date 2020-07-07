@@ -9,7 +9,7 @@ This application is built to support citizens and authorities to detect trees af
  ## Getting started
  Click the following link to start the application
  
-[Tree Cadaster App](https://renestalitza.github.io/IWG/test.html)
+[Tree Cadaster App](https://renestalitza.github.io/IWG/app.html)
 
 ### Example
 
