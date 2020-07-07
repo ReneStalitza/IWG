@@ -13,6 +13,7 @@
 <script src="scripts/pqueue.js"></script>
 <script src="scripts/distance.js"></script>
 <script src="scripts/randomTreeType.js"></script>
+<script src="scripts/loadtrees.js"></script>
 <script src="scripts/onload.js"></script>
 <script src="scripts/treemarker.js"></script>
 
@@ -22,42 +23,42 @@
     </a-scene>
 
     <div class="center">
-    <div id="infobox">
-     <div id="container-up">
-        <div id="boxHead">Info Tab </div>
-        <button class="button" id="open" onclick="openInfobox()">
-                <div class="button-inner">
-                    <div class="button-in"></div>
-                </div>
-            </button>
-         </div>
-        <div id="container-left" >
-         <p id="treeType">Treetype</p>
-         <p id="treeSpecies">-</p>
-        </div>
-        <div id="container-middle" >
-         <p id="current">Affected of oak processionary moths</p>
-            <div id="container-affected">
-             <p id="isAffected">-</p> <button id ="afButton" onclick="markTree()">Change</button>
+        <div id="infobox">
+            <div id="container-up">
+                <div id="boxHead">Info Tab </div>
+                <button class="button" id="open" onclick="openInfobox()">
+                    <div class="button-inner">
+                        <div class="button-in"></div>
+                    </div>
+                </button>
             </div>
-        </div>
-        <div id="container-right" >
-         <p id="potential">Potential</p>
-         <p id="pot">-</p>
-        </div>
-        <div id="container-bottom" >
-         <p id="description">Descriptiion</p>
-            <div id="container-add">
-            <input id="des" type="text" placeholder="Add description...">
-            <button id="add" onclick="addInfo()">Add </button>
+            <div id="container-left">
+                <p id="treeType">Treetype</p>
+                <p id="treeSpecies">-</p>
+            </div>
+            <div id="container-middle">
+                <p id="current">Affected of oak processionary moths</p>
+                <div id="container-affected">
+                    <p id="isAffected">-</p> <button id="afButton" onclick="markTreeButton()">Change</button>
                 </div>
-        <div id="info">
-            <ul id="myList"></ul>
-            </div>    
-             
+            </div>
+            <div id="container-right">
+                <p id="potential">Potential</p>
+                <p id="pot">-</p>
+            </div>
+            <div id="container-bottom">
+                <p id="description">Description</p>
+                <div id="container-add">
+                    <input id="des" type="text" placeholder="Add description...">
+                    <button id="add" onclick="addInfo()">Add </button>
+                </div>
+                <div id="info">
+                    <ul id="myList"></ul>
+                </div>
+
+            </div>
+
         </div>
-        
-     </div>    
     </div>
 </body>
 

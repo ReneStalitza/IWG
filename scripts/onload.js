@@ -3,12 +3,6 @@
  * Loads all trees from data, displays those which are relevant (= close enough) to the current position. 
  */
 var places;
-// Set max/min coordinates to interact in a smaller area TODO: change to var values
-var maxLat = 51.968956;
-var minLat = 51.962976;
-var maxLon = 7.636953;
-var minLon = 7.620886;
-
 var active;
 
 window.onload = () => {
