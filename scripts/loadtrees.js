@@ -68,7 +68,7 @@ function addPlace(place) {
     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
     icon.setAttribute('look-at', '[gps-camera]');
     icon.setAttribute('clickable', '');
-    icon.setAttribute('description', 'species');
+    icon.setAttribute('description', '...');
     icon.setAttribute('scale', '7 7 7');
     icon.setAttribute('geometry', 'primitive: ring; radiusInner: 0.11; radiusOuter: 0.14');
     icon.setAttribute('align', 'center');
