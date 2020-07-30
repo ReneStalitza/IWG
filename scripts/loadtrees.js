@@ -49,20 +49,26 @@ function setTrees() {
         var currPlace = pqueue.deleteMin();
         addPlace(currPlace);
     }
+
+    var texts = document.querySelectorAll('a-text');
+    texts.forEach((txt) => {
+        console.log(txt);
+        console.log(txt.getAttribute('description'));
+    });
 }
 
 function addPlace(place) {
     var scene = document.querySelector('a-scene');
-    var latitude = place.geometry.coordinates[1];
-    var longitude = place.geometry.coordinates[0];
+    const latitude = place.geometry.coordinates[1];
+    const longitude = place.geometry.coordinates[0];
 
     var species = place.species;
-    var icon = document.createElement('a-text');
+    const icon = document.createElement('a-text');
     icon.setAttribute('type', '');
     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
     icon.setAttribute('look-at', '[gps-camera]');
     icon.setAttribute('clickable', '');
-    icon.setAttribute('description', '');
+    icon.setAttribute('description', 'species');
     icon.setAttribute('scale', '7 7 7');
     icon.setAttribute('geometry', 'primitive: ring; radiusInner: 0.11; radiusOuter: 0.14');
     icon.setAttribute('align', 'center');
@@ -78,5 +84,4 @@ function addPlace(place) {
         markTree(icon);
     }
     scene.appendChild(icon);
-    console.log(document.querySelectorAll('a-text'));
 }
