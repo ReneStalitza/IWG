@@ -42,8 +42,6 @@ class PseudoPQueue {
     }
 
     enqueue(key, value) {
-        console.log(this.data.length);
-        console.log(this.capacity);
         if (this.data.length >= this.capacity) {
             this.replace(key, value);
         } else {
